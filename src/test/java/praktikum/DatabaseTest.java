@@ -17,11 +17,11 @@ public class DatabaseTest {
 
     @Test
     public void availableBunsReturnsListOfBuns() {
-        assertNotNull(database.availableBuns());
+        assertNotNull("List of buns is null", database.availableBuns());
     }
 
     @Test
     public void availableIngredientsReturnsListOfIngredients() {
-        assertNotNull(database.availableIngredients());
+        assertNotNull("List of ingredients is null", database.availableIngredients());
     }
 }

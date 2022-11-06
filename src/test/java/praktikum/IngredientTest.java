@@ -25,12 +25,12 @@ public class IngredientTest {
 
         @Test
         public void getNameReturnsIngredientName() {
-            assertEquals(ingredientName, ingredient.getName());
+            assertEquals("Incorrect ingredient name", ingredientName, ingredient.getName());
         }
 
         @Test
         public void getPriceReturnsIngredientName() {
-            assertEquals(ingredientPrice, ingredient.getPrice(), 0.001f);
+            assertEquals("Incorrect ingredient price", ingredientPrice, ingredient.getPrice(), 0.001f);
         }
     }
 
@@ -62,7 +62,7 @@ public class IngredientTest {
         public void getTypeReturnsIngredientType() {
             IngredientType actualIngredientType = ingredient.getType();
 
-            assertEquals(expectedIngredientType, actualIngredientType);
+            assertEquals("Incorrect ingredient type", expectedIngredientType, actualIngredientType);
         }
     }
 }

@@ -21,13 +21,13 @@ public class BunTest {
     public void getNameReturnsBunName() {
         String actualBunName = bun.getName();
 
-        assertEquals(expectedBunName, actualBunName);
+        assertEquals("Incorrect bun name", expectedBunName, actualBunName);
     }
 
     @Test
     public void getPriceReturnsBunPrice() {
         float actualBunPrice = bun.getPrice();
 
-        assertEquals(expectedBunPrice, actualBunPrice, 0.001f);
+        assertEquals("Incorrect bun price", expectedBunPrice, actualBunPrice, 0.001f);
     }
 }

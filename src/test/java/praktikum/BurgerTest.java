@@ -48,7 +48,7 @@ public class BurgerTest {
         Bun expectedBun = bunMock;
         Bun actualBun = burger.bun;
 
-        assertEquals(expectedBun, actualBun);
+        assertEquals("Incorrect bun", expectedBun, actualBun);
     }
 
     @Test
@@ -59,7 +59,7 @@ public class BurgerTest {
         expectedIngredients.add(ingredientMock);
         burger.addIngredient(ingredientMock);
 
-        assertEquals(expectedIngredients, actualIngredients);
+        assertEquals("Incorrect ingredients", expectedIngredients, actualIngredients);
     }
 
     @Test
@@ -77,7 +77,7 @@ public class BurgerTest {
         expectedIngredients.remove(indexOfIngredient);
         burger.removeIngredient(indexOfIngredient);
 
-        assertEquals(expectedIngredients, actualIngredients);
+        assertEquals("Incorrect ingredients", expectedIngredients, actualIngredients);
     }
 
     @Test
@@ -101,7 +101,7 @@ public class BurgerTest {
         expectedIngredients.add(newIndexOfIngredient, expectedIngredients.remove(indexOfIngredient));
         burger.moveIngredient(indexOfIngredient, newIndexOfIngredient);
 
-        assertEquals(expectedIngredients, actualIngredients);
+        assertEquals("Incorrect ingredients", expectedIngredients, actualIngredients);
     }
 
     @Test
@@ -112,7 +112,7 @@ public class BurgerTest {
         float actualPrice = burger.getPrice();
         float expectedPrice = calculatePrice(numberOfIngredients);
 
-        assertEquals(expectedPrice, actualPrice, 0.001f);
+        assertEquals("Incorrect price", expectedPrice, actualPrice, 0.001f);
     }
 
     @Test
@@ -131,7 +131,7 @@ public class BurgerTest {
         burger.setBuns(bunMock);
         String actualReceipt = burger.getReceipt();
 
-        assertEquals(expectedReceipt, actualReceipt);
+        assertEquals("Incorrect receipt", expectedReceipt, actualReceipt);
     }
 
     private void addSomeIngredients(int numberOfIngredients) {
